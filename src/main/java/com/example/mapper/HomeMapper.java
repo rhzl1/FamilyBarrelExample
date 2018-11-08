@@ -1,6 +1,6 @@
 package com.example.mapper;
 
-import com.example.SqlProviderTool.HomeSqlProvider;
+import com.example.sqlProviderTool.HomeSqlProvider;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.SelectProvider;
 
