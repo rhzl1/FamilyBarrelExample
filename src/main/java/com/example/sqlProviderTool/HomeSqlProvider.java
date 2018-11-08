@@ -4,7 +4,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.jdbc.SQL;
 
 /**
- * 对应SQL
+ * 对应SQL语句
  */
 public class HomeSqlProvider {
 
