@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.SysPermissionMapper">
+
+    <select id="selectPermissionAll" resultType="java.util.Map">
+        SELECT p.* FROM sys_user u
+        LEFT JOIN sys_userrole ur ON ur.suId=u.suId
+        LEFT JOIN sys_role r ON r.srId=ur.srId
+        LEFT JOIN sys_rolepermissiont rp ON rp.srId=r.srId
+        LEFT JOIN sys_permissiont p ON rp.spId=p.spId
+        WHERE u.suId = #{suId,jdbcType=VARCHAR}
+    </select>
+
+</mapper>

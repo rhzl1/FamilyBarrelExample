@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.SysUserMapper">
+
+    <select id="selectQueryBySuName" resultType="java.util.Map">
+		SELECT suId,suName,suPass,phone FROM sys_user WHERE 1=1
+		<if test="suName != null and suName != ''">
+            and suName = #{suName,jdbcType=VARCHAR}
+        </if>
+	</select>
+
+</mapper>
